@@ -1,27 +1,21 @@
 {
-    "exercises": [
+  "concepts": {
+      "variables": "A variable is a storage location identified by a name that can hold a value.",
+      "loops": "A loop is a sequence of instructions that is continually repeated until a certain condition is reached.",
+      "functions": "A function is a block of code that only runs when it is called."
+  },
+  "exercises": [
       {
-        "id": 1,
-        "title": "Print Hello World",
-        "description": "Write a program to print 'Hello, World!' to the console.",
-        "solution": "print('Hello, World!')"
+          "id": 1,
+          "title": "Simple Variable Assignment",
+          "description": "Assign a value to a variable and print it.",
+          "solution": "x = 10\nprint(x)"
       },
       {
-        "id": 2,
-        "title": "Basic Arithmetic",
-        "description": "Create a program that adds two numbers.",
-        "solution": "num1 = 5\nnum2 = 3\nprint(num1 + num2)"
+          "id": 2,
+          "title": "Creating a Loop",
+          "description": "Write a loop that prints numbers from 1 to 5.",
+          "solution": "for i in range(1, 6):\n    print(i)"
       }
-    ],
-    "concepts": {
-      "print": {
-        "description": "The print() function outputs data to the console.",
-        "example": "print('Hello, World!')"
-      },
-      "variables": {
-        "description": "Variables store data values.",
-        "example": "x = 5"
-      }
-    }
-  }
-  
+  ]
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Mentor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Programming Mentor</h1>
+    <form action="/explain" method="POST">
+        <label for="concept">Enter a coding concept:</label>
+        <input type="text" id="concept" name="concept" required>
+        <button type="submit">Explain</button>
+    </form>
+    <form action="/exercise" method="POST">
+        <label for="exercise_id">Enter Exercise ID:</label>
+        <input type="number" id="exercise_id" name="exercise_id" required>
+        <input type="hidden" name="username" value="default_user">  <!-- Modify as needed -->
+        <button type="submit">Get Exercise</button>
+    </form>
+</body>
+</html>
