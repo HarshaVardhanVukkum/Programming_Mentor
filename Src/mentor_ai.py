@@ -29,8 +29,33 @@ class ProgrammingMentor:
 # Example usage
 if __name__ == "__main__":
     mentor = ProgrammingMentor('data/content.json')
-    print(mentor.explain_concept('print'))
-    exercise = mentor.get_exercise(1)
-    print(f"Exercise: {exercise['title']}\nDescription: {exercise['description']}")
-    print(f"Solution: {exercise['solution']}")
-    print(mentor.suggest_improvement("a = 5\nb = 10\nprint(a+b)"))
+    
+    while True:
+        print("\n1. Explain a coding concept")
+        print("2. Get a programming exercise")
+        print("3. Suggest code improvement")
+        print("4. Exit")
+        choice = input("Choose an option: ")
+        
+        if choice == '1':
+            concept = input("Enter the concept: ")
+            explanation = mentor.explain_concept(concept)
+            print(explanation)
+            
+        elif choice == '2':
+            exercise_id = int(input("Enter exercise ID: "))
+            exercise = mentor.get_exercise(exercise_id)
+            if exercise:
+                print(f"Exercise: {exercise['title']}\nDescription: {exercise['description']}\nSolution: {exercise['solution']}")
+            else:
+                print("Exercise not found.")
+                
+        elif choice == '3':
+            code = input("Enter your code: ")
+            suggestion = mentor.suggest_improvement(code)
+            print(suggestion)
+            
+        elif choice == '4':
+            break
+        else:
+            print("Invalid choice. Please try again.")
